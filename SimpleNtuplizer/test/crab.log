@@ -1,0 +1,56 @@
+DEBUG 2019-05-05 22:55:34,777: 	 Executing command: 'submit'
+DEBUG 2019-05-05 22:55:34,795: 	 Found CRAB cache file /afs/cern.ch/user/s/shilpi/.crab3
+DEBUG 2019-05-05 22:55:34,805: 	 Checking credentials
+DEBUG 2019-05-05 22:55:34,805: 	 Found proxy file /tmp/x509up_u32031
+DEBUG 2019-05-05 22:55:34,806: 	 Getting proxy life time left
+DEBUG 2019-05-05 22:55:35,713: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u32031 -timeleft
+ output : 83435
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-05 22:55:36,628: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u32031 -actimeleft
+ output : 83434
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-05 22:55:36,629: 	 Proxy lifetime 83435 secs is different from voms extension lifetime 83434 secs for proxy: /tmp/x509up_u32031
+DEBUG 2019-05-05 22:55:36,629: 	 Proxy valid for 23:10:34 hours
+DEBUG 2019-05-05 22:55:36,630: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-05-07 16:52:27,923: 	 Executing command: 'submit'
+DEBUG 2019-05-07 16:52:27,939: 	 Found CRAB cache file /afs/cern.ch/user/s/shilpi/.crab3
+DEBUG 2019-05-07 16:52:27,952: 	 Checking credentials
+DEBUG 2019-05-07 16:52:27,953: 	 Found proxy file /tmp/x509up_u32031
+DEBUG 2019-05-07 16:52:27,953: 	 Getting proxy life time left
+DEBUG 2019-05-07 16:52:28,963: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u32031 -timeleft
+ output : 81428
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-07 16:52:29,880: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u32031 -actimeleft
+ output : 81427
+
+ error: 
+ retcode : 0
+DEBUG 2019-05-07 16:52:29,880: 	 Proxy lifetime 81428 secs is different from voms extension lifetime 81427 secs for proxy: /tmp/x509up_u32031
+DEBUG 2019-05-07 16:52:29,880: 	 Proxy valid for 22:37:07 hours
+DEBUG 2019-05-07 16:52:29,881: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-05-08 00:19:13,429: 	 Executing command: 'status'
+DEBUG 2019-05-08 00:19:13,431: 	 Found CRAB cache file /afs/cern.ch/user/s/shilpi/.crab3
+ERROR 2019-05-08 00:19:13,439: 	 Error: crab_PFcluster/crab_PFClusterPU is not a valid CRAB project directory.
+ERROR 2019-05-08 00:19:13,439: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 161, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 268, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 586, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_PFcluster/crab_PFClusterPU is not a valid CRAB project directory.

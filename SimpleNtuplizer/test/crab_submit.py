@@ -4,6 +4,7 @@ config = config()
 
 #config.General.workArea                 = './'
 config.General.workArea                 =  'crab_PFcluster'
+#config.General.workArea                 =  'crab_PFcluster_v1'
 
 config.General.transferLogs             = False
 
@@ -18,14 +19,16 @@ config.Data.unitsPerJob                 = 100
 
 #config.Site.storageSite                 = 'T3_US_FNALLPC'
 config.Site.storageSite                 = 'T2_CH_CERN'
-config.Data.outLFNDirBase = '/store/group/phys_egamma/PFClusterCalibration/MC18_V2/FlatTrees'
+#config.Data.outLFNDirBase = '/store/group/phys_egamma/PFClusterCalibration/150_V0_2017/FlatTrees'
+config.Data.outLFNDirBase = '/store/group/phys_egamma/PFClusterCalibration/150_V0_2017/FlatTrees/v1'
 
 if __name__ == '__main__':
 
-    datasets = {#'PFclusterPU0p01To5' : '/DoublePhotonNoMaterial_FlatPt-0p01To5/rcoelhol-crab_PFCluster_PU_0p01To5-36e39db79e677743e80137e00b85de2e/USER'
-        'PFClusterPU0p01To5' : '/DoublePhotonNoMaterial_FlatPt-0p01To5/shilpi-crab_DoublePhotonNoMaterial_FlatPt-0p01To5-37b8bb60b9584eb61e5ec36b3b302521/USER'
-#        ,'PFClusterPU5To300'  : '/DoublePhotonNoMaterial_FlatPt-5To300/shilpi-crab_DoublePhotonNoMaterial_FlatPt-5To300-37b8bb60b9584eb61e5ec36b3b302521/USER'
-#        'PFClusterPU5To300'  : '/DoublePhotonNoMaterial_FlatPt-5To300/shilpi-crab_DoublePhotonNoMaterial_FlatPt-5To300-37b8bb60b9584eb61e5ec36b3b302521/USER'
+    datasets = {
+        'PFClusterPU10To300' : '/DoublePhotonNoMaterial_FlatPt-10To300/shilpi-crab_DoublePhotonNoMaterial_FlatPt-10To300_0to70PU-9c112e244c41f1eee1e8bf19070f2b2a/USER',
+        'PFClusterPU0To10' : '/DoublePhotonNoMaterial_FlatPt-0p01To10/shilpi-crab_DoublePhotonNoMaterial_FlatPt-0p0To10_0to70PU-9c112e244c41f1eee1e8bf19070f2b2a/USER',
+        'PFClusterPU10To300noPU' : '/DoublePhotonNoMaterial_FlatPt-10To300/shilpi-crab_DoublePhotonNoMaterial_FlatPt-10To300_noPU-9c112e244c41f1eee1e8bf19070f2b2a/USER',
+        'PFClusterPU0To10noPU' : '/DoublePhotonNoMaterial_FlatPt-0p01To10/shilpi-crab_DoublePhotonNoMaterial_FlatPt-0p0To10_noPU-9c112e244c41f1eee1e8bf19070f2b2a/USER'
         }
 
     from CRABAPI.RawCommand import crabCommand

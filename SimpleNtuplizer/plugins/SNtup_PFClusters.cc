@@ -242,9 +242,11 @@ void SimpleNtuplizer::setPFVariables(const edm::Event& iEvent,
 	}
       
       nhits_pf = clusSize_pf;
-      if(clusSize_pf>=3)
+
+      ///commented on 19th may, 2019
+      /*if(clusSize_pf>=3)
 	nhits_pf = 3;
-      
+      */
       
       nClus_pf++;
 
